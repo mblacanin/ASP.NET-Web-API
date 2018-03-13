@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="STUDIJEModelStoreContainer" CdmEntityContainer="STUDIJEEntities">
+    <FunctionImportMapping FunctionName="STUDIJEModel.Store.PLAN_NA_SMERU" FunctionImportName="PLAN_NA_SMERU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="STUDIJEModel.PLAN_NA_SMERU_Result">
+          <ScalarProperty Name="Ssmer" ColumnName="Ssmer" />
+          <ScalarProperty Name="Spred" ColumnName="Spred" />
+          <ScalarProperty Name="Semestar" ColumnName="Semestar" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="STUDIJEModel.Store.PROSECNA_OCENA" FunctionImportName="PROSECNA_OCENA">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="STUDIJEModel.PROSECNA_OCENA_Result">
+          <ScalarProperty Name="PROSECNA_OCENA" ColumnName="PROSECNA OCENA" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="azuriranje_ocena" FunctionName="STUDIJEModel.Store.azuriranje_ocena" />
+    <FunctionImportMapping FunctionImportName="get_next_nbr" FunctionName="STUDIJEModel.Store.get_next_nbr" />
+    <FunctionImportMapping FunctionImportName="NASTAVNICI_SMER" FunctionName="STUDIJEModel.Store.NASTAVNICI_SMER">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="STUDIJEModel.NASTAVNICI_SMER_Result">
+          <ScalarProperty Name="NAZIVS" ColumnName="NAZIVS" />
+          <ScalarProperty Name="IMEN" ColumnName="IMEN" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="NOVO_ANGAZOVANJE" FunctionName="STUDIJEModel.Store.NOVO_ANGAZOVANJE" />
+    <FunctionImportMapping FunctionImportName="PROVUSLOV" FunctionName="STUDIJEModel.Store.PROVUSLOV" />
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="STUDIJEModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="STUDIJEModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="STUDIJEModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="STUDIJEModel.Store.sp_helpdiagramdefinition" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="STUDIJEModel.Store.sp_helpdiagrams" />
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="STUDIJEModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="STUDIJEModel.Store.sp_upgraddiagrams" />
+    <EntitySetMapping Name="Studentis">
+      <EntityTypeMapping TypeName="STUDIJEModel.Studenti">
+        <MappingFragment StoreEntitySet="Studenti">
+          <ScalarProperty Name="Ssmer" ColumnName="Ssmer" />
+          <ScalarProperty Name="Datr" ColumnName="Datr" />
+          <ScalarProperty Name="Mesto" ColumnName="Mesto" />
+          <ScalarProperty Name="Imes" ColumnName="Imes" />
+          <ScalarProperty Name="Upisan" ColumnName="Upisan" />
+          <ScalarProperty Name="Indeks" ColumnName="Indeks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

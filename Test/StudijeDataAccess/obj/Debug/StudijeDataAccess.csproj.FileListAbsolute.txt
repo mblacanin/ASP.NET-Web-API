@@ -1,0 +1,12 @@
+C:\Users\Miroslav\Documents\Visual Studio 2017\Projects\Test\StudijeDataAccess\bin\Debug\StudijeDataAccess.dll.config
+C:\Users\Miroslav\Documents\Visual Studio 2017\Projects\Test\StudijeDataAccess\bin\Debug\StudijeDataAccess.dll
+C:\Users\Miroslav\Documents\Visual Studio 2017\Projects\Test\StudijeDataAccess\bin\Debug\StudijeDataAccess.pdb
+C:\Users\Miroslav\Documents\Visual Studio 2017\Projects\Test\StudijeDataAccess\bin\Debug\EntityFramework.dll
+C:\Users\Miroslav\Documents\Visual Studio 2017\Projects\Test\StudijeDataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Miroslav\Documents\Visual Studio 2017\Projects\Test\StudijeDataAccess\bin\Debug\EntityFramework.xml
+C:\Users\Miroslav\Documents\Visual Studio 2017\Projects\Test\StudijeDataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Miroslav\Documents\Visual Studio 2017\Projects\Test\StudijeDataAccess\obj\Debug\StudijeDataAccess.csprojResolveAssemblyReference.cache
+C:\Users\Miroslav\Documents\Visual Studio 2017\Projects\Test\StudijeDataAccess\obj\Debug\StudijeDataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Miroslav\Documents\Visual Studio 2017\Projects\Test\StudijeDataAccess\obj\Debug\StudijeDataAccess.dll
+C:\Users\Miroslav\Documents\Visual Studio 2017\Projects\Test\StudijeDataAccess\obj\Debug\StudijeDataAccess.pdb
+C:\Users\Miroslav\Documents\Visual Studio 2017\Projects\Test\StudijeDataAccess\obj\Debug\StudijeDataAccess.csproj.CopyComplete

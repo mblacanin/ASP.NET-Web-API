@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="STUDIJEModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <ComplexType Name="PLAN_NA_SMERU_Result">
+    <Property Name="Ssmer" Type="Int16" />
+    <Property Name="Spred" Type="Int16" />
+    <Property Name="Semestar" Type="Byte" />
+  </ComplexType>
+  <ComplexType Name="PROSECNA_OCENA_Result">
+    <Property Name="PROSECNA_OCENA" Type="Int32" />
+  </ComplexType>
+  <EntityContainer Name="STUDIJEEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="PLAN_NA_SMERU" IsComposable="true" ReturnType="Collection(STUDIJEModel.PLAN_NA_SMERU_Result)">
+      <Parameter Name="smer" Mode="In" Type="Int16" />
+    </FunctionImport>
+    <FunctionImport Name="PROSECNA_OCENA" IsComposable="true" ReturnType="Collection(STUDIJEModel.PROSECNA_OCENA_Result)">
+      <Parameter Name="INDEKS" Mode="In" Type="Int32" />
+      <Parameter Name="UPISAN" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="azuriranje_ocena">
+      <Parameter Name="Indeks" Mode="In" Type="Int16" />
+      <Parameter Name="Upisan" Mode="In" Type="Int16" />
+      <Parameter Name="Spred" Mode="In" Type="Int16" />
+      <Parameter Name="Snast" Mode="In" Type="Int16" />
+      <Parameter Name="azur_ocena" Mode="In" Type="Int16" />
+    </FunctionImport>
+    <FunctionImport Name="get_next_nbr">
+      <Parameter Name="next_nbr" Mode="InOut" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="NASTAVNICI_SMER" ReturnType="Collection(STUDIJEModel.NASTAVNICI_SMER_Result)" />
+    <FunctionImport Name="NOVO_ANGAZOVANJE" ReturnType="Collection(String)">
+      <Parameter Name="nastavnik" Mode="In" Type="Int16" />
+      <Parameter Name="predmet" Mode="In" Type="Int16" />
+      <Parameter Name="smer" Mode="In" Type="Int16" />
+    </FunctionImport>
+    <FunctionImport Name="PROVUSLOV">
+      <Parameter Name="INDEKS" Mode="In" Type="Int32" />
+      <Parameter Name="UPISAN" Mode="In" Type="Int32" />
+      <Parameter Name="Spred" Mode="In" Type="Int32" />
+      <Parameter Name="P" Mode="InOut" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <EntitySet Name="Studentis" EntityType="STUDIJEModel.Studenti" />
+  </EntityContainer>
+  <ComplexType Name="NASTAVNICI_SMER_Result">
+    <Property Type="String" Name="NAZIVS" Nullable="false" MaxLength="40" />
+    <Property Type="String" Name="IMEN" Nullable="false" MaxLength="25" />
+  </ComplexType>
+  <EntityType Name="Studenti">
+    <Key>
+      <PropertyRef Name="Indeks" />
+      <PropertyRef Name="Upisan" />
+    </Key>
+    <Property Name="Indeks" Type="Int16" Nullable="false" />
+    <Property Name="Upisan" Type="Int16" Nullable="false" />
+    <Property Name="Imes" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+    <Property Name="Mesto" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="Datr" Type="DateTime" Precision="3" />
+    <Property Name="Ssmer" Type="Int16" />
+  </EntityType>
+</Schema>
